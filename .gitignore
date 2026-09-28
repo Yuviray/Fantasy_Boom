@@ -1,0 +1,9 @@
+@"
+.venv/
+__pycache__/
+*.pyc
+.env
+*.db
+*.db-journal
+*.parquet
+"@ | Out-File -Encoding utf8 .gitignore

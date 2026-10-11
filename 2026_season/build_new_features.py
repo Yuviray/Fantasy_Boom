@@ -2,9 +2,8 @@ import sqlite3
 import pandas as pd
 import polars as pl
 
-db_path = r"C:\Users\yuvi_\Desktop\Fantasy_Boom\fantasy_data.db"
 
-conn = sqlite3.connect(db_path)
+conn = sqlite3.connect("fantasy_data.db")
 
 df = pd.read_sql("SELECT * FROM player_stats_2026", conn)
 

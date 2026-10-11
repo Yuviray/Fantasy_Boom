@@ -1,10 +1,20 @@
-import requests
+from espn_api.football import League
 
-player_id = "10229"  # Rashee Rice
+league_id = 193562812
 
-url = f"https://api.sleeper.app/v1/stats/nfl/player/{player_id}"
+league = League(
+    league_id=league_id,
+    year=2026
+)
 
-response = requests.get(url)
+for team in league.teams:
+    print(team.team_name)
 
-print("Status:", response.status_code)
-print(response.text[:5000])
+print("\nPlayers:")
+
+for player in league.teams[0].roster:
+    print(
+        player.name,
+        player.position,
+        player.stats
+    )

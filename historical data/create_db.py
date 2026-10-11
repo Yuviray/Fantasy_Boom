@@ -3,8 +3,10 @@ import polars as pl
 import pandas as pd
 import pyarrow
 
+from pathlib import Path
 
 
+folder = Path(r"C:\Users\yuvi_\Desktop\Fantasy_Boom\historical data\2021-2025")
 
 stats = pl.read_parquet("nfl_stats_clean.parquet")
 

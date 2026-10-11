@@ -4,14 +4,11 @@ import pandas as pd
 
 from pathlib import Path
 
-# Load cleaned 2026 data
+folder = Path(__file__).parent.parent /"2026_season"
 
-folder = Path(r"C:\Users\yuvi_\Desktop\Fantasy_Boom\2026_season")
 stats = pl.read_parquet(folder / "nfl_stats_2026_clean.parquet")
 
-db_path = r"C:\Users\yuvi_\Desktop\Fantasy_Boom\fantasy_data.db"
-
-conn = sqlite3.connect(db_path)
+conn = sqlite3.connect("fantasy_data.db")
 
 stats.to_pandas().to_sql(
     "player_stats_2026",

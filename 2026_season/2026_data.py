@@ -1,6 +1,11 @@
 import nflreadpy as nfl
 import polars as pl
 
+from pathlib import Path
+
+
+folder = Path(__file__).parent.parent /"2026_season"
+
 print("Loading 2026 player stats...")
 
 stats = nfl.load_player_stats(
@@ -10,7 +15,6 @@ stats = nfl.load_player_stats(
 
 print("Original shape:", stats.shape)
 
-# Keep fantasy-relevant positions
 stats = stats.filter(
     pl.col("position").is_in(["QB", "RB", "WR", "TE"])
 )
@@ -20,8 +24,15 @@ print("Filtered shape:", stats.shape)
 print("\nPositions:")
 print(stats["position"].value_counts())
 
-# Save
-stats.write_parquet("nfl_stats_2026.parquet")
+print("\nWeeks available:")
+print(
+    stats.group_by("week")
+    .agg(pl.len().alias("player_rows"))
+    .sort("week")
+)
+
+
+stats.write_parquet(folder / "nfl_stats_2026.parquet")
 
 print("\nSaved: nfl_stats_2026.parquet")
 
@@ -36,8 +47,7 @@ columns_to_remove = [
 
 stats = stats.drop(columns_to_remove)
 
-print("Cleaned shape:", stats.shape)
 
-stats.write_parquet("nfl_stats_2026_clean.parquet")
+stats.write_parquet(folder / "nfl_stats_2026_clean.parquet")
 
 print("Saved: nfl_stats_2026_clean.parquet")

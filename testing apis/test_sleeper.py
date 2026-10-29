@@ -1,18 +1,13 @@
-import requests
+import sqlite3
+import pandas as pd
 
-league_id = "1389736777807335424"
+with sqlite3.connect("fantasy_data.db") as conn:
+    for table in ["player_stats_2026", "gridiron_projections_2026"]:
+        print(f"\n{table}")
+        print(pd.read_sql_query(
+            f"PRAGMA table_info({table})", conn
+        )[["name", "type"]].to_string(index=False))
 
-url = f"https://api.sleeper.app/v1/league/{league_id}/rosters"
-
-response = requests.get(url)
-
-print("Status:", response.status_code)
-
-rosters = response.json()
-
-print("Number of rosters:", len(rosters))
-
-for roster in rosters:
-    print("\nRoster ID:", roster["roster_id"])
-    print("Players:", len(roster.get("players", [])))
-    print("Player IDs:", roster.get("players", []))
+        print(pd.read_sql_query(
+            f"SELECT * FROM {table} ORDER BY week DESC LIMIT 3", conn
+        ).to_string(index=False))

@@ -1,0 +1,28 @@
+order of operations to automate in future
+
+
+1.2026_data.py
+2.add_to_sql.py
+3.build_new_features.py
+
+4.get_gridiron_data.py
+5.adding_gridiron_projection_data.py - run this after week concludes to update the db but need to run steps 1-4 again
+
+
+
+
+order of operations to automate in future
+
+
+1.2026_data.py
+2.add_to_sql.py
+3.build_new_features.py
+
+4.get_gridiron_data.py
+5.adding_gridiron_projection_data.py - run this after week concludes to update the db but need to run steps 1-4 again
+6.latest_week
+
+
+now build data sets
+
+

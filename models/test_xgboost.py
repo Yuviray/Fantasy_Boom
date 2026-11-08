@@ -45,3 +45,5 @@ results_df["boom_probability"] = pre_threshold
 results_df["boom_prediction"] = test_pred
 
 results_df.to_csv(folder / "model_results.csv")
+
+

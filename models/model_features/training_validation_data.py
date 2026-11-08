@@ -1,5 +1,6 @@
 import sqlite3
 import pandas as pd
+import os
 
 from pathlib import Path
 
@@ -8,7 +9,7 @@ folder = Path(__file__).parent.parent /"training_data"
 
 DB_PATH = "fantasy_data.db"
 
-current_week = 9
+current_week = int(os.getenv("CURRENT_WEEK", 9))
 
 
 with sqlite3.connect(DB_PATH) as conn:

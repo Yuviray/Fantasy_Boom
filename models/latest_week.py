@@ -1,9 +1,10 @@
 import sqlite3
 import pandas as pd
+import os
 
 DB_PATH = "fantasy_data.db"
 TARGET_SEASON = 2026
-TARGET_WEEK = 9
+TARGET_WEEK = int(os.getenv("CURRENT_WEEK", 9))
 
 with sqlite3.connect(DB_PATH) as conn:
     df = pd.read_sql_query(

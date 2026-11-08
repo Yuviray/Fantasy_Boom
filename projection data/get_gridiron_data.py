@@ -9,7 +9,7 @@ env_path = Path(__file__).parent.parent / ".env"
 load_dotenv(str(env_path))
 
 YEAR = 2026
-CURRENT_WEEK = 9
+CURRENT_WEEK = int(os.getenv("CURRENT_WEEK", 9))
 
 DB_PATH = Path(__file__).parent.parent / "fantasy_data.db"
 CSV_PATH = Path(__file__).parent.parent / "historical data" / f"gridiron_projections_{YEAR}.csv"

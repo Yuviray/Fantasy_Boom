@@ -8,7 +8,7 @@ folder = Path(__file__).parent.parent /"training_data"
 
 DB_PATH = "fantasy_data.db"
 
-current_week = 7
+current_week = 9
 
 
 with sqlite3.connect(DB_PATH) as conn:

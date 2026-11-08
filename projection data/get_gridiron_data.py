@@ -8,10 +8,11 @@ from dotenv import load_dotenv
 env_path = Path(__file__).parent.parent / ".env"
 load_dotenv(str(env_path))
 
-year = 2026
+YEAR = 2026
+CURRENT_WEEK = 9
 
 DB_PATH = Path(__file__).parent.parent / "fantasy_data.db"
-CSV_PATH = Path(__file__).parent.parent / "historical data" / f"gridiron_projections_{year}.csv"
+CSV_PATH = Path(__file__).parent.parent / "historical data" / f"gridiron_projections_{YEAR}.csv"
 
 API = "https://api.gridirondata.com/api/v1"
 HEADERS = {"x-api-key": os.getenv("GRIDIRON_API_KEY")}
@@ -19,33 +20,36 @@ HEADERS = {"x-api-key": os.getenv("GRIDIRON_API_KEY")}
 if not HEADERS["x-api-key"]:
     raise ValueError("GRIDIRON_API_KEY was not found in .env")
 
+
+TABLE_NAME = f"gridiron_projections_{YEAR}" 
+
+
+response = requests.get(
+    f"{API}/projections/{CURRENT_WEEK}",
+    headers=HEADERS,
+    params={
+        "season": YEAR,
+        "scoring": "ppr",
+        "source": "weekly",
+    },
+    timeout=30,
+)
+
+print(f"Week {CURRENT_WEEK}: HTTP {response.status_code}")
+
+response.raise_for_status()
+data = response.json()
+projections = data.get("projections", [])
+
 all_projections = []
 
-for week in range(1, 9):
-    response = requests.get(
-        f"{API}/projections/{week}",
-        headers=HEADERS,
-        params={
-            "season": year,
-            "scoring": "ppr",
-            "source": "weekly",
-        },
-        timeout=30,
-    )
-
-    print(f"Week {week}: HTTP {response.status_code}")
-
-    response.raise_for_status()
-    data = response.json()
-    projections = data.get("projections", [])
-
-    for player in projections:
+for player in projections:
         if player.get("position") not in {"QB", "RB", "WR", "TE"}:
             continue
 
         all_projections.append({
-            "season": year,
-            "week": int(player.get("week", week)),
+            "season": YEAR,
+            "week": int(player.get("week", CURRENT_WEEK)),
             "player_id": player.get("player_id"),
             "player_name": player.get("player_name"),
             "position": player.get("position"),
@@ -65,15 +69,63 @@ df = df.drop_duplicates(
     keep="last",
 )
 
-df.to_csv(CSV_PATH, index=False)
 
 with sqlite3.connect(DB_PATH) as conn:
-    df.to_sql(
-        f"gridiron_projections_{year}",
+    df.head(0).to_sql(
+        TABLE_NAME,
         conn,
-        if_exists="replace",
-        index=False,
+        if_exists="append",
+        index=False
     )
+    #conn.execute("DROP INDEX IF EXISTS IDX_GRIDIRON_PLAYER_WEEK")
+    conn.execute(f"""
+        CREATE UNIQUE INDEX IF NOT EXISTS IDX_GRIDIRON_PLAYER_WEEK ON {TABLE_NAME}(player_id, season, week)
+    """)
+    
+    columns = df.columns.tolist()
+    
+    quoted_columns = ", ".join(f'"{c}"' for c in columns)
+    placeholders = ", ".join("?" for _ in columns)
+    
+    
+    update_columns = [
+        c for c in columns
+        if c not in ["player_id", "season", "week"]
+    ]
+    
+    update_clause = ", ".join(f'"{c}" = excluded."{c}"'
+                              for c in update_columns)
+    
+    sql = f"""
+        INSERT INTO {TABLE_NAME} ({quoted_columns})
+        VALUES ({placeholders})
+        ON CONFLICT (player_id, season, week)
+        DO UPDATE SET {update_clause}
+    """
+    
+    conn.executemany(
+        sql,
+        df.itertuples(index=False, name=None)
+    )
+    
+if CSV_PATH.exists():
+
+    old_df = pd.read_csv(CSV_PATH)
+
+    combined_df = pd.concat(
+        [old_df, df],
+        ignore_index=True
+    )
+
+    combined_df = combined_df.drop_duplicates(
+        subset=["season", "week", "player_id"],
+        keep="last"
+    )
+
+else:
+    combined_df = df.copy()
+
+combined_df.to_csv(CSV_PATH, index=False)
 
 print("\nTotal projection rows:", len(df))
 print("\nRows by week:")
@@ -81,4 +133,4 @@ print(df.groupby("week").size().to_string())
 print("\nRows by position:")
 print(df.groupby("position").size().to_string())
 print("\nSaved CSV:", CSV_PATH)
-print(f"Saved SQLite table: gridiron_projections_{year}")
+print(f"Saved SQLite table: gridiron_projections_{YEAR}")

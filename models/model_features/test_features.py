@@ -17,6 +17,15 @@ with sqlite3.connect(DB_PATH) as conn:
     current_data = pd.read_sql_query("SELECT * FROM current_week", conn)
     
 
+current_data = current_data.rename(columns={
+    "week_projection": "week",
+    "position_projection": "position",
+    "team_projection": "team",
+    "opponent_team_projection": "opponent_team"
+})
+
+    
+
 test = current_data[current_data["week"] == current_week].copy()
 
 test.to_csv(folder / "test_data.csv", index=False)

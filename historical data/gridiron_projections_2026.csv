@@ -4003,7 +4003,7 @@ season,week,player_id,player_name,position,team,projected_points,projection_sour
 2026,9,Nico Collins#WR,Nico Collins,WR,HOU,15.74,weekly,ACTIVE,LAC
 2026,9,Bucky Irving#RB,Bucky Irving,RB,TB,15.72,weekly,ACTIVE,CHI
 2026,9,Trey McBride#TE,Trey McBride,TE,ARI,15.57,weekly,ACTIVE,SEA
-2026,9,J.J. McCarthy#QB,J.J. McCarthy,QB,NYG,15.54,weekly,QUESTIONABLE,PHI
+2026,9,J.J. McCarthy#QB,J.J. McCarthy,QB,NYG,15.54,weekly,ACTIVE,PHI
 2026,9,Matthew Golden#WR,Matthew Golden,WR,GB,15.41,weekly,ACTIVE,NE
 2026,9,Chris Olave#WR,Chris Olave,WR,NO,15.34,weekly,ACTIVE,CLE
 2026,9,Josh Jacobs#RB,Josh Jacobs,RB,GB,15.31,weekly,ACTIVE,NE
@@ -4136,7 +4136,7 @@ season,week,player_id,player_name,position,team,projected_points,projection_sour
 2026,9,Kyle Williams#WR,Kyle Williams,WR,NE,5.53,weekly,ACTIVE,GB
 2026,9,Hunter Henry#TE,Hunter Henry,TE,NE,5.49,weekly,ACTIVE,GB
 2026,9,Laquon Treadwell#WR,Laquon Treadwell,WR,IND,5.44,weekly,ACTIVE,DAL
-2026,9,Jake Ferguson#TE,Jake Ferguson,TE,DAL,5.37,weekly,ACTIVE,IND
+2026,9,Jake Ferguson#TE,Jake Ferguson,TE,DAL,5.37,weekly,QUESTIONABLE,IND
 2026,9,Hollywood Brown#WR,Hollywood Brown,WR,PHI,5.34,weekly,ACTIVE,NYG
 2026,9,Ty Johnson#RB,Ty Johnson,RB,BUF,5.33,weekly,ACTIVE,MIN
 2026,9,Corey Kiner#RB,Corey Kiner,RB,NE,5.3,weekly,ACTIVE,GB
@@ -4156,7 +4156,7 @@ season,week,player_id,player_name,position,team,projected_points,projection_sour
 2026,9,Tommy Tremble#TE,Tommy Tremble,TE,CAR,4.7,weekly,ACTIVE,DEN
 2026,9,John Metchie III#WR,John Metchie III,WR,CAR,4.65,weekly,ACTIVE,DEN
 2026,9,Khalil Herbert#RB,Khalil Herbert,RB,,4.62,weekly,ACTIVE,
-2026,9,Tyler Goodson#RB,Tyler Goodson,RB,DAL,4.62,weekly,QUESTIONABLE,IND
+2026,9,Tyler Goodson#RB,Tyler Goodson,RB,DAL,4.62,weekly,ACTIVE,IND
 2026,9,Tutu Atwell#WR,Tutu Atwell,WR,MIA,4.58,weekly,ACTIVE,DET
 2026,9,Kayshon Boutte#WR,Kayshon Boutte,WR,HOU,4.54,weekly,ACTIVE,LAC
 2026,9,Kenyon Sadiq#TE,Kenyon Sadiq,TE,NYJ,4.53,weekly,ACTIVE,KC
@@ -4229,7 +4229,7 @@ season,week,player_id,player_name,position,team,projected_points,projection_sour
 2026,9,Robert Henry Jr.#RB,Robert Henry Jr.,RB,,1.73,weekly,UNKNOWN,
 2026,9,Isaiah Bond#WR,Isaiah Bond,WR,CLE,1.72,weekly,ACTIVE,NO
 2026,9,Teagan Quitoriano#TE,Teagan Quitoriano,TE,,1.68,weekly,ACTIVE,
-2026,9,Jonathan Mingo#WR,Jonathan Mingo,WR,DAL,1.66,weekly,ACTIVE,IND
+2026,9,Jonathan Mingo#WR,Jonathan Mingo,WR,DAL,1.66,weekly,QUESTIONABLE,IND
 2026,9,Adam Trautman#TE,Adam Trautman,TE,DEN,1.64,weekly,ACTIVE,CAR
 2026,9,Bo Melton#WR,Bo Melton,WR,GB,1.64,weekly,ACTIVE,NE
 2026,9,Luke Farrell#TE,Luke Farrell,TE,SF,1.63,weekly,ACTIVE,LV

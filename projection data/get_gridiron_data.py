@@ -4,6 +4,8 @@ import requests
 import pandas as pd
 from pathlib import Path
 from dotenv import load_dotenv
+import nflreadpy as nfl
+import pandas as pd
 
 env_path = Path(__file__).parent.parent / ".env"
 load_dotenv(str(env_path))
@@ -21,7 +23,32 @@ if not HEADERS["x-api-key"]:
     raise ValueError("GRIDIRON_API_KEY was not found in .env")
 
 
+
 TABLE_NAME = f"gridiron_projections_{YEAR}" 
+
+
+schedule = nfl.load_schedules(seasons=YEAR).to_pandas()
+
+schedule = schedule[schedule["week"] == CURRENT_WEEK]
+
+home_teams = schedule[["week", "home_team", "away_team"]].copy()
+
+home_teams = home_teams.rename(columns={
+    "home_team": "team",
+    "away_team": "opponent_team"
+})
+
+away_teams = schedule[["week", "away_team", "home_team"]].copy()
+
+away_teams = away_teams.rename(columns={
+    "away_team": "team",
+    "home_team": "opponent_team"
+})
+
+team_opponents = pd.concat(
+    [home_teams, away_teams],
+    ignore_index=True
+)
 
 
 response = requests.get(
@@ -42,6 +69,8 @@ data = response.json()
 projections = data.get("projections", [])
 
 all_projections = []
+
+
 
 for player in projections:
         if player.get("position") not in {"QB", "RB", "WR", "TE"}:
@@ -69,8 +98,28 @@ df = df.drop_duplicates(
     keep="last",
 )
 
+team_opponents["team"] = team_opponents["team"].replace({
+    "LA": "LAR"
+})
+
+df = df.merge(
+    team_opponents,
+    on=["week", "team"],
+    how="left"
+)
 
 with sqlite3.connect(DB_PATH) as conn:
+    columns = pd.read_sql_query(
+        "PRAGMA table_info(gridiron_projections_2026)",
+        conn
+    )["name"].tolist()
+
+    if "opponent_team" not in columns:
+        conn.execute("""
+            ALTER TABLE gridiron_projections_2026
+            ADD COLUMN opponent_team TEXT
+        """)
+    
     df.head(0).to_sql(
         TABLE_NAME,
         conn,

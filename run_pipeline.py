@@ -55,9 +55,9 @@ MODEL_PIPELINE = [
     
 def main():
     
-    #print(f"Starting Fantasy Boom Data Pipeline")
-    #for script in DATA_PIPELINE:
-    #    run_script(script)
+    print(f"Starting Fantasy Boom Data Pipeline")
+    for script in DATA_PIPELINE:
+        run_script(script)
         
     print(f"\nStarting Fantasy Boom Model Pipeline")
     for script in MODEL_PIPELINE:

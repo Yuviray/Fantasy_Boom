@@ -3959,7 +3959,7 @@ season,week,player_id,player_name,position,team,projected_points,projection_sour
 2026,8,Brenen Thompson#WR,Brenen Thompson,WR,LAC,0.0,weekly,DOUBTFUL,
 2026,8,Britain Covey#WR,Britain Covey,WR,PHI,0.0,weekly,OUT,
 2026,9,Jahmyr Gibbs#RB,Jahmyr Gibbs,RB,DET,25.93,weekly,ACTIVE,MIA
-2026,9,Puka Nacua#WR,Puka Nacua,WR,LAR,24.13,weekly,ACTIVE,WAS
+2026,9,Puka Nacua#WR,Puka Nacua,WR,LAR,24.13,weekly,QUESTIONABLE,WAS
 2026,9,Jaxon Smith-Njigba#WR,Jaxon Smith-Njigba,WR,SEA,23.33,weekly,ACTIVE,ARI
 2026,9,Brock Purdy#QB,Brock Purdy,QB,SF,22.07,weekly,ACTIVE,LV
 2026,9,Bijan Robinson#RB,Bijan Robinson,RB,ATL,21.86,weekly,ACTIVE,CIN
@@ -3970,7 +3970,7 @@ season,week,player_id,player_name,position,team,projected_points,projection_sour
 2026,9,Josh Allen#QB,Josh Allen,QB,BUF,20.51,weekly,ACTIVE,MIN
 2026,9,Drake Maye#QB,Drake Maye,QB,NE,20.38,weekly,ACTIVE,GB
 2026,9,Ja'Marr Chase#WR,Ja'Marr Chase,WR,CIN,20.26,weekly,ACTIVE,ATL
-2026,9,Patrick Mahomes II#QB,Patrick Mahomes II,QB,KC,20.25,weekly,ACTIVE,NYJ
+2026,9,Patrick Mahomes II#QB,Patrick Mahomes II,QB,KC,20.25,weekly,QUESTIONABLE,NYJ
 2026,9,Dak Prescott#QB,Dak Prescott,QB,DAL,20.04,weekly,ACTIVE,IND
 2026,9,CeeDee Lamb#WR,CeeDee Lamb,WR,DAL,19.78,weekly,ACTIVE,IND
 2026,9,Jared Goff#QB,Jared Goff,QB,DET,19.76,weekly,ACTIVE,MIA
@@ -3986,7 +3986,7 @@ season,week,player_id,player_name,position,team,projected_points,projection_sour
 2026,9,Tee Higgins#WR,Tee Higgins,WR,CIN,17.21,weekly,ACTIVE,ATL
 2026,9,C.J. Stroud#QB,C.J. Stroud,QB,HOU,17.17,weekly,ACTIVE,LAC
 2026,9,Jordan Love#QB,Jordan Love,QB,GB,17.04,weekly,ACTIVE,NE
-2026,9,Drew Lock#QB,Drew Lock,QB,SEA,16.95,weekly,ACTIVE,ARI
+2026,9,Drew Lock#QB,Drew Lock,QB,SEA,16.95,weekly,QUESTIONABLE,ARI
 2026,9,Tyler Shough#QB,Tyler Shough,QB,NO,16.92,weekly,ACTIVE,CLE
 2026,9,Chuba Hubbard#RB,Chuba Hubbard,RB,CAR,16.78,weekly,ACTIVE,DEN
 2026,9,D'Andre Swift#RB,D'Andre Swift,RB,CHI,16.77,weekly,ACTIVE,TB
@@ -4006,18 +4006,18 @@ season,week,player_id,player_name,position,team,projected_points,projection_sour
 2026,9,J.J. McCarthy#QB,J.J. McCarthy,QB,NYG,15.54,weekly,ACTIVE,PHI
 2026,9,Matthew Golden#WR,Matthew Golden,WR,GB,15.41,weekly,ACTIVE,NE
 2026,9,Chris Olave#WR,Chris Olave,WR,NO,15.34,weekly,ACTIVE,CLE
-2026,9,Josh Jacobs#RB,Josh Jacobs,RB,GB,15.31,weekly,ACTIVE,NE
+2026,9,Josh Jacobs#RB,Josh Jacobs,RB,GB,15.31,weekly,QUESTIONABLE,NE
 2026,9,Daniel Jones#QB,Daniel Jones,QB,IND,15.26,weekly,ACTIVE,DAL
 2026,9,Christian Watson#WR,Christian Watson,WR,GB,14.94,weekly,ACTIVE,NE
-2026,9,Rhamondre Stevenson#RB,Rhamondre Stevenson,RB,NE,14.82,weekly,ACTIVE,GB
+2026,9,Rhamondre Stevenson#RB,Rhamondre Stevenson,RB,NE,14.82,weekly,QUESTIONABLE,GB
 2026,9,Baker Mayfield#QB,Baker Mayfield,QB,TB,14.71,weekly,ACTIVE,CHI
 2026,9,Geno Smith#QB,Geno Smith,QB,NYJ,14.7,weekly,ACTIVE,KC
-2026,9,Luther Burden III#WR,Luther Burden III,WR,CHI,14.61,weekly,ACTIVE,TB
+2026,9,Luther Burden III#WR,Luther Burden III,WR,CHI,14.61,weekly,QUESTIONABLE,TB
 2026,9,Shedeur Sanders#QB,Shedeur Sanders,QB,CLE,14.34,weekly,ACTIVE,NO
 2026,9,Carson Wentz#QB,Carson Wentz,QB,MIN,14.18,weekly,ACTIVE,BUF
 2026,9,Woody Marks#RB,Woody Marks,RB,HOU,14.16,weekly,ACTIVE,LAC
 2026,9,Parker Washington#WR,Parker Washington,WR,JAX,14.15,weekly,ACTIVE,BAL
-2026,9,Justin Herbert#QB,Justin Herbert,QB,LAC,14.08,weekly,ACTIVE,HOU
+2026,9,Justin Herbert#QB,Justin Herbert,QB,LAC,14.08,weekly,QUESTIONABLE,HOU
 2026,9,Derrick Henry#RB,Derrick Henry,RB,BAL,13.96,weekly,ACTIVE,JAX
 2026,9,Zay Flowers#WR,Zay Flowers,WR,BAL,13.9,weekly,ACTIVE,JAX
 2026,9,Joe Milton III#QB,Joe Milton III,QB,PHI,13.9,weekly,ACTIVE,NYG
@@ -4042,15 +4042,16 @@ season,week,player_id,player_name,position,team,projected_points,projection_sour
 2026,9,Alvin Kamara#RB,Alvin Kamara,RB,NO,12.32,weekly,ACTIVE,CLE
 2026,9,Isaiah Likely#TE,Isaiah Likely,TE,NYG,12.29,weekly,ACTIVE,PHI
 2026,9,Jalen Coker#WR,Jalen Coker,WR,CAR,12.1,weekly,ACTIVE,DEN
+2026,9,Jaylen Waddle#WR,Jaylen Waddle,WR,DEN,11.98,weekly,QUESTIONABLE,CAR
 2026,9,Harold Fannin Jr.#TE,Harold Fannin Jr.,TE,CLE,11.61,weekly,ACTIVE,NO
 2026,9,DJ Moore#WR,DJ Moore,WR,BUF,11.61,weekly,ACTIVE,MIN
 2026,9,Tucker Kraft#TE,Tucker Kraft,TE,GB,11.42,weekly,ACTIVE,NE
 2026,9,Omar Cooper Jr.#WR,Omar Cooper Jr.,WR,NYJ,11.33,weekly,ACTIVE,KC
-2026,9,Ladd McConkey#WR,Ladd McConkey,WR,LAC,11.31,weekly,ACTIVE,HOU
+2026,9,Ladd McConkey#WR,Ladd McConkey,WR,LAC,11.31,weekly,QUESTIONABLE,HOU
 2026,9,Adonai Mitchell#WR,Adonai Mitchell,WR,NYJ,11.18,weekly,ACTIVE,KC
 2026,9,Joe Fagnano#QB,Joe Fagnano,QB,BAL,11.16,weekly,ACTIVE,JAX
 2026,9,Breece Hall#RB,Breece Hall,RB,NYJ,11.06,weekly,ACTIVE,KC
-2026,9,Emeka Egbuka#WR,Emeka Egbuka,WR,TB,10.92,weekly,QUESTIONABLE,CHI
+2026,9,Emeka Egbuka#WR,Emeka Egbuka,WR,TB,10.92,weekly,ACTIVE,CHI
 2026,9,DeMario Douglas#WR,DeMario Douglas,WR,NE,10.72,weekly,ACTIVE,GB
 2026,9,Keenan Allen#WR,Keenan Allen,WR,IND,10.67,weekly,ACTIVE,DAL
 2026,9,Antonio Williams#WR,Antonio Williams,WR,WAS,10.61,weekly,ACTIVE,LA
@@ -4069,7 +4070,7 @@ season,week,player_id,player_name,position,team,projected_points,projection_sour
 2026,9,Jakobi Meyers#WR,Jakobi Meyers,WR,JAX,9.83,weekly,ACTIVE,BAL
 2026,9,Kyle Pitts Sr.#TE,Kyle Pitts Sr.,TE,ATL,9.75,weekly,ACTIVE,CIN
 2026,9,Dallas Goedert#TE,Dallas Goedert,TE,PHI,9.68,weekly,ACTIVE,NYG
-2026,9,Xavier Worthy#WR,Xavier Worthy,WR,KC,9.65,weekly,ACTIVE,NYJ
+2026,9,Xavier Worthy#WR,Xavier Worthy,WR,KC,9.65,weekly,QUESTIONABLE,NYJ
 2026,9,Khalil Shakir#WR,Khalil Shakir,WR,BUF,9.61,weekly,ACTIVE,MIN
 2026,9,Caleb Douglas#WR,Caleb Douglas,WR,MIA,9.59,weekly,ACTIVE,DET
 2026,9,Braelon Allen#RB,Braelon Allen,RB,NYJ,9.57,weekly,ACTIVE,KC
@@ -4174,7 +4175,6 @@ season,week,player_id,player_name,position,team,projected_points,projection_sour
 2026,9,Cyrus Allen#WR,Cyrus Allen,WR,KC,4.16,weekly,ACTIVE,NYJ
 2026,9,Tank Dell#WR,Tank Dell,WR,HOU,4.14,weekly,ACTIVE,LAC
 2026,9,Sione Vaki#RB,Sione Vaki,RB,DET,4.08,weekly,ACTIVE,MIA
-2026,9,Kyle Monangai#RB,Kyle Monangai,RB,CHI,4.03,weekly,QUESTIONABLE,TB
 2026,9,Jack Bech#WR,Jack Bech,WR,LV,4.01,weekly,ACTIVE,SF
 2026,9,Marvin Mims Jr.#WR,Marvin Mims Jr.,WR,DEN,3.81,weekly,ACTIVE,CAR
 2026,9,Davis Allen#TE,Davis Allen,TE,LAR,3.78,weekly,ACTIVE,WAS
@@ -4231,7 +4231,7 @@ season,week,player_id,player_name,position,team,projected_points,projection_sour
 2026,9,Teagan Quitoriano#TE,Teagan Quitoriano,TE,,1.68,weekly,ACTIVE,
 2026,9,Jonathan Mingo#WR,Jonathan Mingo,WR,DAL,1.66,weekly,QUESTIONABLE,IND
 2026,9,Adam Trautman#TE,Adam Trautman,TE,DEN,1.64,weekly,ACTIVE,CAR
-2026,9,Bo Melton#WR,Bo Melton,WR,GB,1.64,weekly,ACTIVE,NE
+2026,9,Bo Melton#WR,Bo Melton,WR,GB,1.64,weekly,QUESTIONABLE,NE
 2026,9,Luke Farrell#TE,Luke Farrell,TE,SF,1.63,weekly,ACTIVE,LV
 2026,9,Deion Burks#WR,Deion Burks,WR,,1.59,weekly,UNKNOWN,
 2026,9,Keleki Latu#TE,Keleki Latu,TE,,1.54,weekly,ACTIVE,
@@ -4253,7 +4253,7 @@ season,week,player_id,player_name,position,team,projected_points,projection_sour
 2026,9,Jonnu Smith#TE,Jonnu Smith,TE,,1.05,weekly,ACTIVE,
 2026,9,DeeJay Dallas#RB,DeeJay Dallas,RB,JAX,1.04,weekly,ACTIVE,BAL
 2026,9,Barion Brown#WR,Barion Brown,WR,NO,1.04,weekly,ACTIVE,CLE
-2026,9,Mo Alie-Cox#TE,Mo Alie-Cox,TE,IND,1.02,weekly,ACTIVE,DAL
+2026,9,Mo Alie-Cox#TE,Mo Alie-Cox,TE,IND,1.02,weekly,QUESTIONABLE,DAL
 2026,9,Sean Tucker#RB,Sean Tucker,RB,TB,1.01,weekly,ACTIVE,CHI
 2026,9,Myles Price#WR,Myles Price,WR,MIN,1.01,weekly,ACTIVE,BUF
 2026,9,Marlin Klein#TE,Marlin Klein,TE,HOU,0.99,weekly,ACTIVE,LAC
@@ -4436,13 +4436,13 @@ season,week,player_id,player_name,position,team,projected_points,projection_sour
 2026,9,Jaylen Wright#RB,Jaylen Wright,RB,MIA,0.0,unavailable,OUT,DET
 2026,9,Will Mallory#TE,Will Mallory,TE,IND,0.0,unavailable,OUT,DAL
 2026,9,Josh Whyle#TE,Josh Whyle,TE,,0.0,unavailable,OUT,
-2026,9,Jaylen Waddle#WR,Jaylen Waddle,WR,DEN,0.0,unavailable,OUT,CAR
 2026,9,David Sills V#WR,David Sills V,WR,,0.0,weekly,ACTIVE,
 2026,9,Brenen Thompson#WR,Brenen Thompson,WR,LAC,0.0,unavailable,OUT,HOU
 2026,9,Xavier Legette#WR,Xavier Legette,WR,CAR,0.0,unavailable,IR,DEN
 2026,9,Hunter Long#TE,Hunter Long,TE,JAX,0.0,unavailable,IR,BAL
 2026,9,A.J. Brown#WR,A.J. Brown,WR,NE,0.0,unavailable,OUT,GB
 2026,9,George Pickens#WR,George Pickens,WR,DAL,0.0,unavailable,OUT,IND
+2026,9,Kyle Monangai#RB,Kyle Monangai,RB,CHI,0.0,unavailable,OUT,TB
 2026,9,Britain Covey#WR,Britain Covey,WR,PHI,0.0,unavailable,OUT,NYG
 2026,9,Jonathon Brooks#RB,Jonathon Brooks,RB,CAR,0.0,unavailable,IR,DEN
 2026,9,Kendre Miller#RB,Kendre Miller,RB,FA,0.0,unavailable,ACTIVE,

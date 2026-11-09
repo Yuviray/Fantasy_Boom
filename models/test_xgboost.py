@@ -6,7 +6,7 @@ import numpy as np
 
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix, classification_report,average_precision_score, roc_auc_score, brier_score_loss
 
-folder = Path(__file__).parent.parent /"models/training_data"
+folder = Path(__file__).parent.parent /"results"
 
 
 model_dir =  Path(__file__).parent.parent /"models/saved_models"

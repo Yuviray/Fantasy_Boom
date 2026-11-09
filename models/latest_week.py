@@ -81,12 +81,21 @@ with sqlite3.connect(DB_PATH) as conn:
         conn,
         params=(TARGET_SEASON, TARGET_WEEK)
     )
+def clean_player_name(name):
+    return(
+        name.str.replace(r"\s+(II|III|IV|Jr\.|Sr\.)$", "", regex=True)
+        .str.strip()
+    )
+    
+projections["player_name_clean"] = clean_player_name(projections["player_name"])
+
+latest_features["player_display_name_clean"] = clean_player_name(latest_features["player_display_name"])
 
 
 prediction_df = projections.merge(
     latest_features,
-    left_on="player_name",
-    right_on="player_display_name",
+    left_on="player_name_clean",
+    right_on="player_display_name_clean",
     how="left",
     suffixes=("_projection", "_stats")
 )
